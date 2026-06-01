@@ -1,0 +1,38 @@
+file_path: './data/mini_project_2_data.csv'
+target_column: no_show
+usd_to_sgd: 1.37
+val_test_size: 0.2
+val_size: 0.5
+cv: 5
+scoring: roc_auc
+param_grids:
+  logistic_regression:
+    classifier__C: [0.001, 0.01, 0.1, 1, 10, 100, 1000]
+    classifier__penalty: [l1, l2]
+  knn:
+    classifier__n_neighbors: [11, 21, 31, 41, 51]
+    classifier__weights: [uniform, distance]
+    classifier__metric: [euclidean, manhattan]
+  random_forest:
+    classifier__n_estimators: [100, 200]
+    classifier__max_depth: [10, 20, null]
+    classifier__min_samples_leaf: [1, 5]
+drop_features:
+  - booking_id
+  - checkout_day
+  - arrival_day
+  - booking_month
+  - num_children
+  - num_adults
+  - platform
+nominal_features:
+  - branch
+  - country
+  - first_time
+  - room
+cyclical_features:
+  - arrival_month
+  - checkout_month
+numerical_features:
+  - lead_time
+  - price
