@@ -1,7 +1,7 @@
 # Hotel No-Show Prediction
 
 ## Project Description
-This project implements a machine learning pipeline to predict the No-Show of customers for a hotel chain.  The pipeline includes data cleaning, preprocessing, model training and evaluation. Multiple classification models are trained and compared to find the best performing one based on various metrics. 
+This project implements an end to end machine learning pipeline to predict the No-Show of customers for a hotel chain.  The pipeline includes data cleaning, preprocessing, model training and evaluation. Multiple classification models are trained and compared to find the best performing one based on various metrics. 
 ## Prerequisites and Installation Instructions
 
 ### Requirements
